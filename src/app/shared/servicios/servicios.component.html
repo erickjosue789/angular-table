@@ -1,0 +1,65 @@
+<section id="services" class="py-5">
+    <div class="container">
+        <h2 class="text-center">Nuestros Servicios</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://il-abogados.pe/wp-content/uploads/2022/03/dXiSvpOdWPwevaXmhsNBR9bTSSznvbO2B3avetPp.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Compra y Venta de Propiedades</h5>
+                        <p class="card-text">Asesoramos en la compra y venta de inmuebles, ofreciendo un servicio
+                            personalizado para encontrar la propiedad ideal o el comprador adecuado, asegurando
+                            transacciones seguras y eficientes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://grupocima.com.mx/wp-content/uploads/2019/10/casa-renta.jpg" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Alquiler de Viviendas y Locales Comerciales</h5>
+                        <p class="card-text">Facilitamos el proceso de alquiler de viviendas y locales comerciales,
+                            gestionando contratos y garantizando que las propiedades cumplan con los estándares de
+                            calidad y confort requeridos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://acbienesraices.com.mx/wp-content/uploads/2017/08/Administraci%C3%B3n-de-inmuebles-GRAL-3.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Administración de Propiedades</h5>
+                        <p class="card-text">Nos encargamos de la gestión integral de propiedades en alquiler,
+                            incluyendo la cobranza de rentas, mantenimiento y resolución de problemas, para que los
+                            propietarios puedan disfrutar de una inversión sin preocupaciones.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <table class="table mt-4">
+                    <thead>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Duración</th>
+                        <th>Horario</th>
+                    </thead>
+                    <tbody>
+                        @for(servicio of servicios ; track servicio.texto){
+                            <tr>
+                                <td>{{servicio.texto[0]}}</td>
+                                <td>{{servicio.texto[1]}}</td>
+                                <td>{{servicio.texto[2]}}</td>
+                                <td>{{servicio.texto[3]}}</td>
+                            </tr>
+                        }@empty{
+                            Empty
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
