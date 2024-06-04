@@ -88,15 +88,18 @@
     <div class="container">
       <h2 class="text-center">Galería</h2>
       <div class="row">
-        <div class="col-md-4">
-          <img src="https://blog.hubspot.es/hs-fs/hubfs/media/marketingventasinmobiliaria.jpeg?width=595&height=400&name=marketingventasinmobiliaria.jpeg" class="img-fluid img-cover-2" alt="...">
-        </div>
-        <div class="col-md-4">
-          <img src="https://estaticos-cdn.prensaiberica.es/clip/b2612ca1-016c-4db5-b602-3a93a0177c9a_16-9-aspect-ratio_default_0.jpg" class="img-fluid img-cover-2" alt="...">
-        </div>
-        <div class="col-md-4">
-          <img src="https://st3.idealista.it/news/archivie/styles/fullwidth_xl/public/2020-10/media/image/dl_a01644567.jpg?VersionId=3XnBxB1FZTRLPuExlBw9w41kVCEB.qqh&itok=VuzyvdT0" class="img-fluid img-cover-2" alt="...">
-        </div>
+        @for (foto of fotos; track foto.id){
+          <div class="col-md-4">
+            <div class="card shadow-sm">
+              <img src="{{foto.url}}" class="img-fluid img-cover-2" alt="{{foto.id}}">
+              <div class="card-body">
+                <p class="card-text">
+                  {{foto.descripcion}}
+                </p>
+              </div>
+            </div>
+          </div>
+        }
       </div>
     </div>
   </section>
